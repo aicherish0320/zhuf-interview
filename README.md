@@ -29,3 +29,16 @@
 
 - 可能会导致 `xss` 攻击
 - `v-html` 会替换掉标签内部的字元素
+
+### 7. `Vue`父子组件生命周期调用顺序
+
+- 加载渲染过程
+  - 父`beforeCreate` -> 父`created` -> 父`beforeMount` -> 子 `beforeCreate` -> 子 `created` -> 子 `beforeMount` -> 子`Mounted` -> 父`Mounted`
+- 子组件更新过程
+  - 父`beforeUpdate` -> 子`beforeUpdate` -> 子`updated` ->父`updated`
+- 父组件更新过程
+  - 父`beforeUpdate` -> 父`updated`
+- 销毁过程
+  - 父`beforeDestroy` -> 子`beforeDestroy` -> 子`destroyed` -> 父`destroyed`
+
+> 组件的调用顺序都是先父后子，渲染完成的顺序是先子后父；组件的销毁操作都是先父后子，销毁完成的顺序是先子后父
