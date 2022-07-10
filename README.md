@@ -24,3 +24,8 @@
 `v-model` 可以看成是 `value + input`方法的语法糖
 
 当 `v-model` 绑定在 `input` 元素上时，处理绑定对应的事件，还会生成一个 `directives`，添加`compositionstart`处理原生输入框的问题。
+
+### 6. `Vue`中`v-html`会导致哪些问题？
+
+- 可能会导致 `xss` 攻击
+- `v-html` 会替换掉标签内部的字元素
