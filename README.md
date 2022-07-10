@@ -18,3 +18,9 @@
 
 - 原生 `dom` 事件的绑定采用的是 `addEventListener`实现
 - 组件绑定事件采用的是 `$on`方法
+
+### 5. `v-model` 中的实现原理及如何自定义`v-model`
+
+`v-model` 可以看成是 `value + input`方法的语法糖
+
+当 `v-model` 绑定在 `input` 元素上时，处理绑定对应的事件，还会生成一个 `directives`，添加`compositionstart`处理原生输入框的问题。
