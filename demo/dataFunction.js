@@ -1,10 +1,17 @@
 function VueComponent() {}
 
 VueComponent.prototype.$options = {
-  data: { message: 'Hello' }
+  // data: { message: 'Hello' }
+  data() {
+    return {
+      message: 'Hello'
+    }
+  }
 }
 
 const v1 = new VueComponent()
-v1.$options.data = 'World'
+const data1 = v1.$options.data()
+data1.message = 'World'
 const v2 = new VueComponent()
-console.log(v2.$options.message)
+const data2 = v1.$options.data()
+console.log(data2)
