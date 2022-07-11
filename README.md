@@ -42,3 +42,12 @@
   - 父`beforeDestroy` -> 子`beforeDestroy` -> 子`destroyed` -> 父`destroyed`
 
 > 组件的调用顺序都是先父后子，渲染完成的顺序是先子后父；组件的销毁操作都是先父后子，销毁完成的顺序是先子后父
+
+### 8. `Vue`组件如何通信？
+
+- 父子间通信，父 -> 子通过`props`、子 -> 父 `$on`、`$emit`
+- 获取父子组件实例的方式 `$parent`、`$children`
+- 在父组件中提供数据子组件进行消费`Provide`、`inject`
+- `Ref`获取实例的方式调用组件的属性或者方法
+- `Event Bus`实现跨组件通信
+- `Vuex` 状态管理实现通信
