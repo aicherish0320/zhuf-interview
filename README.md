@@ -113,3 +113,8 @@
 - 支持 composition api
 - vue3 中响应式数据原理改成 proxy
 - vDom 对比算法更新，只更新 vDom 绑定了动态数据的部分
+
+### 15. 实现 hash 路由 和 history 路由
+
+- onhashchange
+- history.pushState
