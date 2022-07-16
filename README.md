@@ -73,3 +73,36 @@
 
 - `keep-alive` 可以实现组件的缓存，当组件切换时不会对当前组件进行卸载，常用的 2 个属性`include/exclude`，2 个声明周期`activated/deactivated`
 - LRU 算法 > 最近最久未使用法
+
+### 13. Vue 常见的性能优化
+
+- 编码优化
+  - 不要将所有的数据都放在 data 中，data 中的数据都会增加 getter 和 setter ，会收集对应的 watcher
+  - vue 在 v-for 时给每项元素绑定事件需要用事件代理
+  - SPA 页面采用 keep-alive 缓存组件
+  - 拆分组件（提供复用性、增加代码的可维护性，减少不必要的渲染）
+  - v-if 当值为 false 时内部指令不会执行，具有阻断功能。很多情况下使用 v-if 代替 v-show
+  - key 保证唯一性（默认 vue 会采用就地复用策略）
+  - Object.freeze 冻结数据
+  - 合理使用路由懒加载、异步组件
+  - 尽量采用 runtime 运行时版本
+  - 数据持久化的问题（防抖、节流）
+- Vue 加载性能优化
+  - 第三方模块按需导入 (babel-plugin-component)
+  - 滚动到可视区域动态加载
+  - 图片懒加载
+- 用户体验
+  - app-skepeton 骨架屏
+  - app-shell app 壳
+  - pwa
+- SEO 优化
+  - 预渲染插件 prerender-spa-plugin
+  - 服务端渲染 ssr
+- 打包优化
+  - 使用 cdn 的方式加载第三方模块
+  - 多线程打包 happypack
+  - splitChunks 抽离公共文件
+  - sourceMap 生成
+- 缓存、压缩
+  - 客户端缓存、服务端缓存
+  - 服务端 gzip 压缩
