@@ -118,3 +118,10 @@
 
 - onhashchange
 - history.pushState
+
+### 其他
+
+- 双向绑定和 vuex 是否冲突
+- vue.set 的原理
+- 知道 vue 生命周期内部怎么实现的么
+- vue-lazyLoader 的原理，手写伪代码
