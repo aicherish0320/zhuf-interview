@@ -1,0 +1,23 @@
+{
+  "name": "zhuf-interview",
+  "version": "1.0.0",
+  "description": "- 渲染组件时，会通过 `Vue.extend`方法构建子组件的构造函数，并进行视力话。最终手动调用`$mount`进行挂在。更新组件时会进行 `patchVNode` 流程，核心就是 `diff` 算法",
+  "main": "01-parse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aicherish0320/zhuf-interview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aicherish0320/zhuf-interview/issues"
+  },
+  "homepage": "https://github.com/aicherish0320/zhuf-interview#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
