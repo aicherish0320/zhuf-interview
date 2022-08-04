@@ -125,3 +125,26 @@
 - vue.set 的原理
 - 知道 vue 生命周期内部怎么实现的么
 - vue-lazyLoader 的原理，手写伪代码
+
+## 模块化
+
+### 什么是模块化
+
+- 模块化就是按照一个的规则把代码封装成若干的相互依赖的文件并进行组合
+- 每个模块内的数据都是私有的，只向外选择性的暴露一些方法和数据与外界进行数据通信
+
+### 模块化的意义
+
+- 有利于代码分享、解耦以及复用
+- 团队并行开发
+- 避免命名冲突
+- 相互引用，按需加载
+
+### 模块化的发展史
+
+- 自执行函数
+- AMD(Asynchronous Module Definition)
+- CMD(Common Module Definition)
+- CommonJS(服务器端开发)
+- UMD(Universal Module Definition)
+- ES6 Module、ESM
