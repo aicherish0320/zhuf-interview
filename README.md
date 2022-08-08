@@ -148,3 +148,8 @@
 - CommonJS(服务器端开发)
 - UMD(Universal Module Definition)
 - ES6 Module、ESM
+  - ES6 模块的设计思想是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量
+  - CommonJS 模块输出的一个值的拷贝，ES6 模块输出的是值的引用
+    - export {变量}，导出的是一个变量的引用
+    - export default 这种方式，导出的是一个值
+  - CommonJS 模块是运行时加载，ES6 模块是编译时输出接口
