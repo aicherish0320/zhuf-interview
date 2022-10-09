@@ -7,7 +7,7 @@ const obj = {
 }
 
 // const parse = (obj, str) => {
-//   const fn =  new Function('obj', 'return obj.', str)
+//   const fn =  new Function('obj', 'return obj.' + str)
 //   return fn(obj)
 // }
 
